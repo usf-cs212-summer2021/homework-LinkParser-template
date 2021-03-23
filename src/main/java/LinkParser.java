@@ -24,8 +24,8 @@ public class LinkParser {
 	 * @throws MalformedURLException if unable to craft new URL
 	 */
 	public static URL normalize(URL url) throws MalformedURLException, URISyntaxException {
-			return new URI(url.getProtocol(), url.getUserInfo(), url.getHost(), 
-					url.getPort(), url.getPath(), url.getQuery(), null).toURL();
+		return new URI(url.getProtocol(), url.getUserInfo(), url.getHost(), 
+				url.getPort(), url.getPath(), url.getQuery(), null).toURL();
 	}
 
 	/**
