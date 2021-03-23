@@ -5,6 +5,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -399,7 +400,8 @@ public class LinkParserTest {
 			@Test
 			@Order(2)
 			public void testSimple() throws MalformedURLException {
-				List<URL> expected = List.of(new URL("https://www.cs.usfca.edu/~cs212/simple/a/b/c/subdir.html"),
+				List<URL> expected = List.of(
+						new URL("https://www.cs.usfca.edu/~cs212/simple/a/b/c/subdir.html"),
 						new URL("https://www.cs.usfca.edu/~cs212/simple/capital_extension.HTML"),
 						new URL("https://www.cs.usfca.edu/~cs212/simple/double_extension.html.txt"),
 						new URL("https://www.cs.usfca.edu/~cs212/simple/empty.html"),
@@ -439,82 +441,20 @@ public class LinkParserTest {
 			@Test
 			@Order(1)
 			public void testGuten1400() throws MalformedURLException {
-				List<URL> expected = List.of(new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0012.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0037.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/pip.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0072.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0082.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0132.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0189.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0223.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0242.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0245.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0279.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0295.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0335.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0348.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0393.jpg"),
-						new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/images/0399.jpg"));
-	
+				URL base = new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/");
+				List<URL> copies = Collections.nCopies(0, new URL(base, "1400-h.htm"));
+				List<URL> images = List.of(new URL(base, "images/0037.jpg"), new URL(base, "images/pip.jpg"),
+						new URL(base, "images/0072.jpg"), new URL(base, "images/0082.jpg"), new URL(base, "images/0132.jpg"),
+						new URL(base, "images/0189.jpg"), new URL(base, "images/0223.jpg"), new URL(base, "images/0242.jpg"),
+						new URL(base, "images/0245.jpg"), new URL(base, "images/0279.jpg"), new URL(base, "images/0295.jpg"),
+						new URL(base, "images/0335.jpg"), new URL(base, "images/0348.jpg"), new URL(base, "images/0393.jpg"),
+						new URL(base, "images/0399.jpg"));
+
+				List<URL> expected = new ArrayList<>();
+				expected.add(new URL(base, "images/0012.jpg")); // first is image
+				expected.addAll(copies); // appears 59 times in table of contents
+				expected.addAll(images); // followed by many images
+				
 				testRemote("https://www.cs.usfca.edu/~cs212/guten/1400-h/1400-h.htm", expected);
 			}
 	
