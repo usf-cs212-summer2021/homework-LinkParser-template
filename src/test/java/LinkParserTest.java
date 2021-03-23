@@ -442,7 +442,7 @@ public class LinkParserTest {
 			@Order(1)
 			public void testGuten1400() throws MalformedURLException {
 				URL base = new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/");
-				List<URL> copies = Collections.nCopies(0, new URL(base, "1400-h.htm"));
+				List<URL> copies = Collections.nCopies(59, new URL(base, "1400-h.htm"));
 				List<URL> images = List.of(new URL(base, "images/0037.jpg"), new URL(base, "images/pip.jpg"),
 						new URL(base, "images/0072.jpg"), new URL(base, "images/0082.jpg"), new URL(base, "images/0132.jpg"),
 						new URL(base, "images/0189.jpg"), new URL(base, "images/0223.jpg"), new URL(base, "images/0242.jpg"),
