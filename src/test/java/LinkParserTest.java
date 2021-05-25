@@ -28,7 +28,7 @@ import org.junit.jupiter.api.TestMethodOrder;
  * 
  * @author CS 212 Software Development
  * @author University of San Francisco
- * @version Spring 2021
+ * @version Summer 2021
  */
 @TestMethodOrder(MethodName.class)
 public class LinkParserTest {
@@ -443,7 +443,7 @@ public class LinkParserTest {
 			public void testGuten1400() throws MalformedURLException {
 				URL base = new URL("https://www.cs.usfca.edu/~cs212/guten/1400-h/");
 				List<URL> copies = Collections.nCopies(59, new URL(base, "1400-h.htm"));
-				List<URL> images = List.of(new URL(base, "images/0037.jpg"), new URL(base, "images/pip.jpg"),
+				List<URL> images = List.of(new URL(base, "images/0012.jpg"), new URL(base, "images/0037.jpg"),
 						new URL(base, "images/0072.jpg"), new URL(base, "images/0082.jpg"), new URL(base, "images/0132.jpg"),
 						new URL(base, "images/0189.jpg"), new URL(base, "images/0223.jpg"), new URL(base, "images/0242.jpg"),
 						new URL(base, "images/0245.jpg"), new URL(base, "images/0279.jpg"), new URL(base, "images/0295.jpg"),
@@ -451,7 +451,6 @@ public class LinkParserTest {
 						new URL(base, "images/0399.jpg"));
 
 				List<URL> expected = new ArrayList<>();
-				expected.add(new URL(base, "images/0012.jpg")); // first is image
 				expected.addAll(copies); // appears 59 times in table of contents
 				expected.addAll(images); // followed by many images
 				
